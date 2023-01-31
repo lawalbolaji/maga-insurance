@@ -59,7 +59,7 @@ app.get('/policies', async (req, res) => {
 
   res.json({
     data: policies,
-    totalPages: totalPolicies / policiesPerPage,
+    totalPages: Math.floor(totalPolicies / policiesPerPage),
     policiesPerPage,
   });
 });
